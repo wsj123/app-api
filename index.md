@@ -45,26 +45,4 @@ User-Agent: MApi 1.1 (dpscope 7.5.0 appstore; iPhone 8.3 iPhone7,1; a0d0) Paros/
 # 用token
 - 会员登录的时候请求登录接口，然后服务器端返回给客户端一个token，该token生成的规则是 `网站公钥 + 当前uid + 当前时间戳 + 一段随机数双重加密`，根据需求决定是把该token放进cache等一段时间自动失效，还是放进数据库（如果要放进数据库的话，单独拎出一张表来，顺便记录用户的登录，登出时间），`在用户登录的时候改变一下，确保该token只能在用户人为登出登录之间有用`。
 `为保安全，应保证让用户在一段时间内自动退出`；此方案配合Linux和数据库的权限管理可以防外又防内；
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wsj123/app-api/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
