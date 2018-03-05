@@ -1,8 +1,9 @@
-## Welcome to GitHub Pages
+## 普通接口
+一般为GET请求，比如获取新闻列表 GET http://Example.com/index.php?module=news&action=list，为了防止采集或者暴力查询，我们PC端一般做如下处理:
+1.防止本站被它站file_get_contents，所以要识别user_agent，如果不是通过浏览器来访问的话直接不给看。
+2.如果别人通过伪造user_agent来访问的话，就通过单位时间ip的访问量来控制抓取方，可以写一套算法，如果再一个ip在前后一分钟多于多少次访问量来处理。但是，会有一种情况，即某个小区或公司内都是使用某一个IP的外网的话，这样搞就会自寻死路，所以还要配合浏览器中的cookie来处理
+总结: 请求头可以伪造，IP地址可以变更，cookie可以清空，基本上PC端是很难防这个问题的，比如淘宝，点评等大站的数据我也是经常去采的。
 
-You can use the [editor on GitHub](https://github.com/wsj123/app-api/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
